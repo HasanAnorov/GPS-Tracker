@@ -2,4 +2,5 @@
     <string name="app_name">GPS Tracker</string>
     <string name="title_activity_maps">GPS Tacker</string>
     <string name="search_here">Search here ...</string>
+    <string name="api_key">AIzaSyB0j1Q50XZ7Lkz122_5kijD7PBvU72Qw-k</string>
 </resources>
