@@ -126,12 +126,10 @@ class MainActivity : AppCompatActivity(),OnMapReadyCallback {
             val address = list[0]
             Log.d("myTag2", "Found locations : ${address.toString()}")
 
-
             locationForDistance = LatLng(address.latitude,address.longitude)
 
             moveCamera(LatLng(address.latitude,address.longitude),15F,address.locality,true)
         }
-
     }
 
     private fun moveCamera(latlng:LatLng, zoom:Float,title:String,checkForDistance:Boolean){
@@ -173,7 +171,7 @@ class MainActivity : AppCompatActivity(),OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap) {
         gMap = googleMap
-        gMap.mapType = GoogleMap.MAP_TYPE_NORMAL
+        gMap.mapType = GoogleMap.MAP_TYPE_SATELLITE
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             gMap.isMyLocationEnabled = true
             gMap.uiSettings.isMyLocationButtonEnabled = false
